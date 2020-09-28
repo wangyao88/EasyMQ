@@ -6,9 +6,18 @@
 
 	<groupId>com.sxkl.project</groupId>
 	<artifactId>easy-mq</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.0</version>
+
+	<packaging>pom</packaging>
+
 	<name>EasyMQ</name>
 	<description>简单高效消息中间件</description>
+
+	<modules>
+		<module>EasyMQCommon</module>
+		<module>EasyMQServer</module>
+		<module>EasyMQClient</module>
+	</modules>
 
 	<properties>
 		<java.version>1.8</java.version>
@@ -26,5 +35,24 @@
 			<artifactId>netty-all</artifactId>
 			<version>4.1.43.Final</version>
 		</dependency>
+
+		<dependency>
+			<groupId>com.mohan.project</groupId>
+			<artifactId>easy-tools</artifactId>
+			<version>1.0.Final</version>
+		</dependency>
 	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<source>8</source>
+					<target>8</target>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
 </project>
